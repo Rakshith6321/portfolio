@@ -5,134 +5,234 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAKSHITH | Portfolio</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-    scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
 }
 
-body {
-    background: radial-gradient(circle at center, #0f2027, #0f172a, #000);
-    color: white;
-    overflow-x: hidden;
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
 }
 
-/* Particle background */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+#particles-js{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
 }
 
-/* Header */
-header {
-    padding: 25px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:sticky;
+top:0;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(8px);
 }
 
-header h1 {
-    color: #38bdf8;
-    font-size: 28px;
-    font-weight: bold;
+header h1{
+color:#38bdf8;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: 0.3s;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:0.3s;
 }
 
-nav a:hover {
-    color: #38bdf8;
+nav a:hover{
+color:#38bdf8;
 }
 
-/* Hero Section */
-.hero {
-    padding: 140px 10%;
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:100px 10%;
+flex-wrap:wrap;
 }
 
-.hero h2 {
-    font-size: 55px;
-    font-weight: 700;
+.hero-text{
+max-width:600px;
 }
 
-.hero span {
-    color: #38bdf8;
-    text-shadow: 0 0 15px #38bdf8;
+.hero h2{
+font-size:50px;
 }
 
-.hero p {
-    margin-top: 20px;
-    font-size: 18px;
-    max-width: 600px;
-    color: #cbd5e1;
+.hero span{
+color:#38bdf8;
 }
 
-/* Sections */
-section {
-    padding: 100px 10%;
+.typing{
+font-size:22px;
+margin-top:10px;
+color:#cbd5e1;
 }
 
-.section-title {
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: #38bdf8;
+.buttons{
+margin-top:25px;
 }
 
-/* Cards */
-.skills, .projects {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
+.btn{
+padding:12px 25px;
+border:2px solid #38bdf8;
+color:#38bdf8;
+text-decoration:none;
+margin-right:15px;
+border-radius:6px;
+transition:0.3s;
 }
 
-.card {
-    background: rgba(30, 41, 59, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 25px;
-    border-radius: 15px;
-    width: 260px;
-    transition: 0.4s;
-    border: 1px solid rgba(56,189,248,0.2);
+.btn:hover{
+background:#38bdf8;
+color:black;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(56,189,248,0.6);
+/* PROFILE IMAGE */
+.profile img{
+width:280px;
+border-radius:50%;
+border:5px solid #38bdf8;
+animation:float 3s ease-in-out infinite;
 }
 
-/* Contact */
-#contact p {
-    font-size: 18px;
-    color: #cbd5e1;
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: rgba(0,0,0,0.5);
-    margin-top: 60px;
-    font-size: 14px;
+/* SECTIONS */
+section{
+padding:80px 10%;
 }
 
-/* Responsive */
-@media(max-width: 768px){
-    .hero h2 {
-        font-size: 38px;
-    }
+.section-title{
+font-size:30px;
+margin-bottom:40px;
+color:#38bdf8;
+text-align:center;
+}
 
-    .card {
-        width: 100%;
-    }
+/* SERVICES */
+.services{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.service-card{
+background:#1e293b;
+padding:30px;
+border-radius:10px;
+width:250px;
+text-align:center;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+/* SKILLS */
+.skill{
+margin-bottom:25px;
+}
+
+.progress{
+background:#1e293b;
+height:10px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.progress div{
+height:10px;
+background:#38bdf8;
+width:0;
+}
+
+/* PROJECTS */
+.projects{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.project-card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+width:300px;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+text-align:center;
+}
+
+.stat h2{
+font-size:40px;
+color:#38bdf8;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:#1e293b;
+padding:40px;
+border-radius:10px;
+text-align:center;
+max-width:800px;
+margin:auto;
+}
+
+/* CONTACT */
+.contact-icons{
+text-align:center;
+margin-top:20px;
+}
+
+.contact-icons a{
+color:#38bdf8;
+font-size:25px;
+margin:0 15px;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#1e293b;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.profile{
+margin-top:40px;
+}
 }
 </style>
 </head>
@@ -142,81 +242,126 @@ footer {
 <div id="particles-js"></div>
 
 <header>
-    <h1>RAKSHITH</h1>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h1>RAKSHITH</h1>
+<nav>
+<a href="#services">Services</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h2>Hi, I'm <span>RAKSHITH</span></h2>
-    <p>A passionate developer building modern websites and applications.</p>
+<div class="hero-text">
+<h2>Hi, I'm <span>RAKSHITH</span></h2>
+<div class="typing" id="typing"></div>
+<div class="buttons">
+<a href="#" class="btn">Download Resume</a>
+<a href="#projects" class="btn">View Projects</a>
+</div>
+</div>
+
+<div class="profile">
+<img src="https://i.pravatar.cc/300" alt="profile">
+</div>
 </section>
 
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>I am a developer who loves creating clean and user-friendly digital experiences. I enjoy solving problems and learning new technologies.</p>
+<section id="services">
+<h2 class="section-title">Services I Offer</h2>
+<div class="services">
+<div class="service-card"><i class="fas fa-code"></i><h3>Website Development</h3></div>
+<div class="service-card"><i class="fas fa-palette"></i><h3>UI/UX Design</h3></div>
+<div class="service-card"><i class="fas fa-mobile-alt"></i><h3>Responsive Design</h3></div>
+<div class="service-card"><i class="fas fa-bolt"></i><h3>Website Optimization</h3></div>
+</div>
 </section>
 
 <section id="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills">
-        <div class="card">HTML</div>
-        <div class="card">CSS</div>
-        <div class="card">JavaScript</div>
-        <div class="card">Python</div>
-    </div>
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">HTML 90%
+<div class="progress"><div style="width:90%"></div></div></div>
+
+<div class="skill">CSS 85%
+<div class="progress"><div style="width:85%"></div></div></div>
+
+<div class="skill">JavaScript 75%
+<div class="progress"><div style="width:75%"></div></div></div>
+
+<div class="skill">Python 70%
+<div class="progress"><div style="width:70%"></div></div></div>
+
 </section>
 
 <section id="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects">
-        <div class="card">
-            <h3>Portfolio</h3>
-        </div>
-        <div class="card">
-            <h3>Ecommerce</h3>
-            <p>Created a web for a small ecommerce seller with new ideas and technology.</p>
-        </div>
-    </div>
+<h2 class="section-title">Projects</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Portfolio</h3>
+<a href="#" class="btn">View Project</a>
+</div>
+
+<div class="project-card">
+<h3>Ecommerce</h3>
+<p>Created a web for a small ecommerce seller with new ideas and technology.</p>
+<a href="#" class="btn">View Project</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="stats">
+<div class="stat"><h2>5+</h2><p>Projects Completed</p></div>
+<div class="stat"><h2>1+</h2><p>Years Learning</p></div>
+<div class="stat"><h2>100%</h2><p>Client Satisfaction</p></div>
+</div>
+</section>
+
+<section>
+<div class="testimonial">
+<p>"Rakshith delivered the project on time with excellent design and functionality. Highly recommended!"</p>
+<br>
+<b>- Client</b>
+</div>
 </section>
 
 <section id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: rakshithakula99@gmail.com</p>
+<h2 class="section-title">Contact</h2>
+<p style="text-align:center;">rakshithakula99@gmail.com</p>
+<div class="contact-icons">
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
+<a href="mailto:rakshithakula99@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
 </section>
 
 <footer>
-    © 2026 RAKSHITH | Portfolio
+© 2026 RAKSHITH | Portfolio
 </footer>
 
-<!-- Particles Library -->
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
 particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 100 },
-    "color": { "value": "#38bdf8" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.5 },
-    "size": { "value": 3 },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#38bdf8",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 2
-    }
-  }
+particles:{
+number:{value:100},
+color:{value:"#38bdf8"},
+line_linked:{enable:true,color:"#38bdf8"},
+move:{speed:2}
+}
 });
+
+/* Typing Animation */
+const text="Web Developer | Freelancer | Creative Thinker";
+let i=0;
+function typing(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(typing,50);
+}
+}
+typing();
 </script>
 
 </body>
